@@ -95,6 +95,14 @@ ai-translation/
 - 翻译请求直接从浏览器发往 AI 接口，无中间服务器
 - 仅申请必要权限，不访问浏览历史、书签等无关数据
 
+## 界面
+
+![安装](./assets/setup.jpg)
+![新增配置](./assets/config-add.jpg)
+![修改配置](./assets/config-update.jpg)
+![选中翻译](./assets/trans-selected.jpg)
+![整页翻译](./assets/trans-page.jpg)
+
 ## 许可
 
 MIT
