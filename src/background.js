@@ -130,7 +130,7 @@ async function translateBatch(segments, targetLang, config) {
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: 'translate-selection',
-    title: '翻译选中内容',
+    title: '用沐风翻译选中内容',
     contexts: ['selection']
   });
   console.log('[AI-Trans] Context menu created');
