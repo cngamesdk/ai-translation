@@ -68,7 +68,15 @@ async function callAnthropic(text, systemPrompt, config) {
 
   const data = await response.json();
   console.log('[AI-Trans] Anthropic response received');
-  return data.content[0].text.trim();
+
+  // Handle extended thinking: find the first text block
+  const textBlock = data.content.find(block => block.type === 'text');
+  if (!textBlock) {
+    console.error('[AI-Trans] No text content in response:', data.content);
+    throw new Error('API returned no text content');
+  }
+
+  return textBlock.text.trim();
 }
 
 async function callOpenAI(text, systemPrompt, config) {
